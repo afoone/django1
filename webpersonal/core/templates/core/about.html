@@ -1,4 +1,12 @@
-{%extends 'core/base.html'%}
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block background %}{% static "core/img/about-bg.jpg" %}{% endblock %}
+
+{% block headers %}
+  <h1>Alfonso Tienda</h1>
+  <span class="subheading">Sobre mí</span>
+{% endblock%}
 
 {% block title %}
 Sobre Mí
@@ -6,9 +14,17 @@ Sobre Mí
 
 
 {% block content %}
-
-<h1>Mi web personal</h1>
-<h2>Sobre mi, el que suscribe</h2>
-<p>Sin duda, soy el <strong>mejor</strong></p>
+    <div class="container">
+      <div class="row">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">Alfonso Tienda</h2>   
+          <p>Nacido en... lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit...</p>
+        </div>
+      </div>  
+    </div>
 
 {% endblock %}
