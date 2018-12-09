@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'core',
-    'services',
+    'services.apps.ServicesConfig',
+    'social.apps.SocialConfig',
 
 ]
 
@@ -66,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.processor.ctx_dic',
             ],
         },
     },
