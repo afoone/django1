@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'blog',
     'core',
+    'ckeditor',
+    'contact',
     'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
     'social.apps.SocialConfig',
@@ -132,6 +134,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+<<<<<<< HEAD
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
@@ -195,3 +198,9 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+#Email config
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'a8fc9b957d599d'
+EMAIL_HOST_PASSWORD = '2ca5e65f731317'
+EMAIL_PORT = '2525'
