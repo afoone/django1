@@ -14,10 +14,12 @@
             {% endif %}
             <form action="" method="post">{% csrf_token %}
                 <table>
-                    {{ form.as_table }}
+                    {{ form.as_p }}
                 </table>
                 <br>
-                <input type="submit" value="Actualizar página" />
+                <div class='text-center'>
+                  <input class='btn btn-primary btn-block' type="submit" value="Actualizar página" />
+                </div>
             </form>
         </div>
       </div>
