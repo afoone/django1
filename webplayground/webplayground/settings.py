@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'core',
-    'pages.apps.PagesConfig'
+    'pages.apps.PagesConfig',
+    'profiles'
 ]
 
 MIDDLEWARE = [
@@ -124,5 +125,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #auth redirects
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'profile'
 LOGOUT_REDIRECT_URL = 'home'
+
+# email configuration
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+    EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+else:
+    pass
+
+#media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
